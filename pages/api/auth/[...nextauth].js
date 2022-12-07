@@ -1,7 +1,7 @@
-import { NextAuth } from 'next-auth';
-import { RedditProvider } from 'next-auth/providers/reddit';
+import NextAuth from 'next-auth';
+import RedditProvider from 'next-auth/providers/reddit';
 
-export const authOptions = {
+export default NextAuth({
 	providers: [
 		RedditProvider({
 			clientId: process.env.REDDIT_CLIENT_ID,
@@ -13,6 +13,4 @@ export const authOptions = {
 			},
 		}),
 	],
-};
-
-export default NextAuth(authOptions);
+});

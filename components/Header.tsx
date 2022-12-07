@@ -58,10 +58,7 @@ function Header() {
 			</div>
 			{session ? (
 				<div
-					onClick={(e) => {
-						e.preventDefault();
-						signIn();
-					}}
+					onClick={() => signOut()}
 					className="hidden lg:flex items-center space-x-2 border rounded-md border-gray-200 p-2 cursor-pointer"
 				>
 					<div className="relative h-5 w-5 flex-shrink-0">
@@ -82,10 +79,7 @@ function Header() {
 				</div>
 			) : (
 				<div
-					onClick={(e) => {
-						e.preventDefault();
-						signOut();
-					}}
+					onClick={() => signIn()}
 					className="hidden lg:flex items-center space-x-2 border rounded-md border-gray-200 p-2 cursor-pointer"
 				>
 					<div className="relative h-5 w-5 flex-shrink-0">
